@@ -14,3 +14,9 @@ vagrant@EPUAKHAWO13DT11:~$ cat access_log | awk '{print $2}' | tr -d "(|)|," | s
 ```
 match($0, /:[0-9][0-9]:[0-9][0-9]:[0-9][0-9]/) { print substr($0, RSTART+1, RLENGTH) }
 ```
+```
+#!/bin/bash
+
+time=$(awk 'match($0, /:[0-9][0-9]:[0-9][0-9]:[0-9][0-9]/){ print substr($0, RSTART+1, RLENGTH) }' $1)
+echo $time | tr -s " " "\n" | sort
+```
