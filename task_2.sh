@@ -37,6 +37,7 @@ done
 printf "Periods:\n"
 echo "${time_array[0]} ${periods_array[@]:0:$(echo $number_of_periods-1 | bc)} ${time_array[-1]}"
 ###################################
+# Count number of requests in periods
 count_requests=0
 counter=0
 for ((m=0;m<$(echo "${#periods_array[@]}"-1 | bc);m++))
