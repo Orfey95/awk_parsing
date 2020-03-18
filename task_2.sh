@@ -29,15 +29,31 @@ printf "Number of periods: "$number_of_periods"\n"
 ###################################
 # Create array of periods #########
 periods_array=()
+sum=0
 for ((j=1;j<$number_of_periods+1;j++))
 do
 periods_array+=("$(echo $(date -d @$(( $(date -d "${time_array[0]}" "+%s") + $(date -d "00:0$(echo $2*$j | bc):00" "+%s") )) +%H:%M:%S))")
 done
-
-echo "${periods_array[@]}"
+printf "Periods:\n"
+echo "${time_array[0]} ${periods_array[@]:0:$(echo $number_of_periods-1 | bc)} ${time_array[-1]}"
 ###################################
-#for i in "${time_array[@]}"
-#do
-    #echo $i
-    #if [ $i -lt  ]
-#done
+count_requests=0
+counter=0
+for ((m=0;m<$(echo "${#periods_array[@]}"-1 | bc);m++))
+do
+for ((n=$count_requests;n<"${#time_array[@]}";n++))
+do
+if [[ $(date -d "${time_array[n]}" "+%s") -lt $(date -d "${periods_array[m]}" "+%s") ]]; then
+continue
+else
+count_requests=$n
+break
+fi
+done
+echo "Period $(echo $m+1 | bc)"
+echo $count_requests-$counter | bc
+sum=$(echo $sum+$(echo $count_requests-$counter | bc) | bc)
+counter=$count_requests
+done
+echo "Period ${#periods_array[@]}"
+echo "${#time_array[@]}-$sum" | bc
