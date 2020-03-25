@@ -40,6 +40,10 @@ vagrant@EPUAKHAW013DT11:~$ ./task_3.sh access_log 7
    3333 Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
    2379 Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
 ```
+5) Найти N самых длинных запросов или самых коротких запросов.
+```
+
+```
 7) К-во запросов по апстримам (воркерам).
 ```
 vagrant@EPUAKHAWO13DT11:~$ ./task_7.sh access_log
