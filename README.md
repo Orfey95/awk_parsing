@@ -1,4 +1,4 @@
-Собрать статистику по айпишникам браузера, в результате указать N самых частых.
+1) Собрать статистику по айпишникам браузера, в результате указать N самых частых.
 ```
 vagrant@EPUAKHAWO13DT11:~$ ./task_1.sh access_log 7
    4464 54.246.139.111
@@ -9,7 +9,7 @@ vagrant@EPUAKHAWO13DT11:~$ ./task_1.sh access_log 7
     626 196.38.95.108
     534 147.110.251.87
 ```
-Найти частоту запросов в интервал времени dT(минут) и ход решения.
+2) Найти частоту запросов в интервал времени dT(минут) и ход решения.
 ```
 vagrant@EPUAKHAWO13DT11:~$ ./task_2.sh access_log 4
 
@@ -29,7 +29,7 @@ Period 3
 Period 4
 25220
 ```
-Найти N самых частых User-Agent.
+3) Найти N самых частых User-Agent.
 ```
 vagrant@EPUAKHAW013DT11:~$ ./task_3.sh access_log 7
   18469 Amazon CloudFront
@@ -40,7 +40,7 @@ vagrant@EPUAKHAW013DT11:~$ ./task_3.sh access_log 7
    3333 Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
    2379 Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
 ```
-К-во запросов по апстримам (воркерам).
+7) К-во запросов по апстримам (воркерам).
 ```
 vagrant@EPUAKHAWO13DT11:~$ ./task_7.sh access_log
    7166 ajp://10.1.4.69:8009
