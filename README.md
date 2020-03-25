@@ -1,7 +1,7 @@
 # awk_parsing
 Собрать статистику по айпишникам браузера, в результате указать N самых частых.
 ```
-vagrant@EPUAKHAWO13DT11:~$ cat access_log | awk '{print $2}' | tr -d "(|)|," | sort | uniq -c | sort -nr | head -n 7
+vagrant@EPUAKHAWO13DT11:~$ ./task_1.sh access_log 7
    4464 54.246.139.111
    4219 54.77.132.130
    3170 196.11.134.77
@@ -36,7 +36,7 @@ Period 4
 ```
 К-во запросов по апстримам (воркерам).
 ```
-vagrant@EPUAKHAWO13DT11:~$ cat access_log | awk -F "\"" '{print $8}' | sort | uniq -c | sort -nr | head -n -1
+vagrant@EPUAKHAWO13DT11:~$ ./task_7.sh access_log
    7166 ajp://10.1.4.69:8009
    7140 ajp://10.1.3.204:8009
    7136 ajp://10.1.4.67:8009
