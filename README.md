@@ -1,4 +1,3 @@
-# awk_parsing
 Собрать статистику по айпишникам браузера, в результате указать N самых частых.
 ```
 vagrant@EPUAKHAWO13DT11:~$ ./task_1.sh access_log 7
