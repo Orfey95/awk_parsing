@@ -5,4 +5,4 @@
 log=$1
 
 # Code
-awk -F "\"" '{print $8}' $log | sort | uniq -c | sort -nr | head -n -1
+awk -F "\"" '{print $8}' $log | grep -ve '^-$' | sort | uniq -c | sort -nr
