@@ -32,7 +32,14 @@ Period 4
 ```
 Найти N самых частых User-Agent.
 ```
-
+vagrant@EPUAKHAW013DT11:~$ ./task_3.sh access_log 7
+  18469 Amazon CloudFront
+   9077 Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+   7624 Jakarta Commons-HttpClient/3.1
+   5469 Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+   3462 Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+   3333 Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+   2379 Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
 ```
 К-во запросов по апстримам (воркерам).
 ```
