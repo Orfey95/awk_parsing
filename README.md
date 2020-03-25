@@ -30,6 +30,10 @@ Period 3
 Period 4
 25220
 ```
+Найти N самых частых User-Agent.
+```
+
+```
 К-во запросов по апстримам (воркерам).
 ```
 vagrant@EPUAKHAWO13DT11:~$ cat access_log | awk -F "\"" '{print $8}' | sort | uniq -c | sort -nr | head -n -1
